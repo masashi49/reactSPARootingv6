@@ -12,6 +12,7 @@ export const Footer = () => {
             <li>
                 <Link to="/contact">contact</Link>
             </li>
+            <li><Link to="/posts">Posts</Link></li>
         </ul>
     )
 }
