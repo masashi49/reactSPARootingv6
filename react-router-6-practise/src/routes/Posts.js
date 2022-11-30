@@ -17,10 +17,10 @@ export const Posts = () => {
         <>
             <h2>Postsのページ</h2>
             <ul>
-                { posts.map( ( post ) => ( // mapで回します
-                    <li key={ post.id }>
-                        <Link to={ `/posts/${ post.id }` }>
-                            { post.id }:{ post.title }
+                { posts.map( ( { id, title } ) => ( // mapで回します
+                    <li key={ id }>
+                        <Link to={ `/posts/${ id }` }>
+                            { id }:{ title }
                         </Link>
                     </li>
                 ) ) }
