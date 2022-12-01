@@ -4,6 +4,7 @@ import { About } from "./routes/About";
 import { Contact } from "./routes/Contact";
 import { Posts } from "./routes/Posts";
 import { Post } from "./routes/Post";
+import { PostIndex } from "./routes/PostIndex";
 import { Footer } from "./routes/Footer";
 import { Notfound } from "./routes/Notfound";
 
@@ -16,7 +17,8 @@ function App () {
         <Route path="/" element={ <Home /> } />
         <Route path="/about" element={ <About /> } />
         <Route path="/contact" element={ <Contact message="Hello" /> } />
-        <Route path="/posts" element={    <Posts /> }>
+        <Route path="/posts" element={ <Posts /> }>
+          <Route index element={ <PostIndex /> } />
           <Route path=":postId" element={ <Post /> } />
         </Route>
         <Route path="*" element={ <Notfound /> } />
